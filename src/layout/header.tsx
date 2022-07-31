@@ -17,7 +17,7 @@ const Header = () => {
         <meta name='viewport' content='width=device-width,initial-scale=1' />
       </Head>
 
-      <AppBar position='static' elevation={0} position='fixed' sx={{background: '#F15B5B'}}>
+      <AppBar position='fixed' elevation={0} sx={{background: '#FA6964'}}>
         <Container maxWidth='lg'>
             <Toolbar disableGutters>
               <Grid container sx={{justifyContent: 'space-between'}}>
