@@ -15,8 +15,8 @@ const typeData = [
 ]
 
 const Sidebar = () => {
-  const [open, setOpen] = useState(true);
-  const [typeOpen, setTypeOpen] = useState(true);
+  const [open, setOpen] = useState(false);
+  const [typeOpen, setTypeOpen] = useState(false);
   return (
     <Grid item sm={2} sx={{minHeight: 750, background: '#FFFF80'}}>
       <Box sx={{background: '#ffff00'}}>
