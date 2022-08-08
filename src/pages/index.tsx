@@ -31,8 +31,8 @@ const Index: NextPage = ({data}: any) => {
   return (
     <Box>
       <Container maxWidth='lg'>
-        <Typography>
-          全{data.count}匹
+        <Typography sx={{marginTop: 3, marginBottom: 3}} variant='h5'>
+          全<span style={{color: 'red'}}>{data.count}</span>匹
         </Typography>
         <Grid container>
           {data.count > 0 &&

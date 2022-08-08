@@ -1,5 +1,4 @@
 import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/Grid';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
@@ -7,6 +6,7 @@ import Link from 'next/link';
 import { CardActionArea } from '@mui/material';
 import axios from "axios";
 import { useEffect, useState } from 'react';
+import Name from '@/components/name';
 
 const PokemonCard = (props: any) => {
   const [pokemon, setPokemon] = useState<any>([]);
@@ -35,10 +35,8 @@ const PokemonCard = (props: any) => {
                 component='img'
                 image={pokemon.sprites.other['official-artwork'].front_default}
               />
-              <CardContent sx={{height: {sm:100, xs: 70}}}>
-                <Typography gutterBottom variant='subtitle1'>
-                  {pokemon.name}
-                </Typography>
+              <CardContent sx={{height: 50}}>
+                <Name url={pokemon.species.url} />
               </CardContent>
             </CardActionArea>
           </Link>
