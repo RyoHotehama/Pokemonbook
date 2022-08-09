@@ -3,10 +3,11 @@ import ListItemButton from '@mui/material/ListItemButton';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import { useState } from 'react';
+import Link from 'next/link';
 
 const data = [
-  {label: 'カントー'},
-  {label: 'ジョウト'},
+  {label: 'カントー', limit: 150, offset: 0},
+  {label: 'ジョウト', limit: 100, offset: 151},
 ];
 
 const typeData = [
@@ -28,7 +29,9 @@ const Sidebar = () => {
         {open &&
           data.map((item) => (
             <ListItemButton key={item.label} sx={{background: '#fff9a6'}}>
-              <ListItemText primary={item.label}></ListItemText>
+              <Link href={{pathname: '/', query: {limit: item.limit, offset: item.offset}}} passHref>
+                <ListItemText primary={item.label}></ListItemText>
+              </Link>
             </ListItemButton>
           ))
         }
